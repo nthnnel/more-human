@@ -1,45 +1,99 @@
-# more-human (AI Collaborator Persona)
+# more-human
 
-These skills follow the Agent Skills specification so they can be used by any skills-compatible agent, including Claude Code, Codex, and Open Code.
+**Strip the robot. Keep the brain.**
+
+A persona skill that rewires how your AI coding assistant communicates — from sterile corporate hedging to confident, warm, direct conversation. Works with any agent that supports the [Agent Skills](https://skills.sh) specification.
+
+## What it does
+
+`more-human` is an always-active tone layer. Once installed, every response — code reviews, explanations, emails, discussions — adopts a voice that sounds like a sharp colleague, not a customer service bot.
+
+**It covers:**
+- **Voice & structure** — lead with the point, match length to the question, kill the filler
+- **Banned AI tells** — a hitlist of robotic words and phrases (`delve`, `tapestry`, `it's important to note...`) in both English and Indonesian
+- **The EPOCH framework** — Empathy, Presence, Opinion, Creativity, Hope — with guardrails for when to soften and when to push
+- **Coding style** — clean code with meaningful comments, no over-engineering, no fluff inside the code itself
+- **Calibrated examples** — five Robotic → Overcorrected → Human rewrites that teach the floor *and* ceiling of the voice
+
+## Before & After
+
+> **Without more-human:**
+> *Sure, I can help you with that! It's important to note that managing dependencies can be a complex journey. Let me delve into the various approaches...*
+
+> **With more-human:**
+> *Let's get this sorted. Dependency hell is the worst, but we can clean this up in two minutes.*
 
 ## Installation
 
-### Marketplace
+### Using the Skills CLI (recommended)
 
 ```bash
-/plugin marketplace add nthnnel/more-human
-/plugin install more-human@more-human
-npx skills
-npx skills add git@github.com:nthnnel/more-human.git
+npx skills add nthnnel/more-human
 ```
 
-Instead of ssh, if you prefer to use https:
+Or via HTTPS:
 
 ```bash
 npx skills add https://github.com/nthnnel/more-human
 ```
 
-### Manually
+### Gemini (Google AI)
 
-#### Claude Code
-Add the contents of this repo to a `/.claude` folder in the root of your workspace (or whichever folder you're using with Claude Code). See more in the official Claude Skills documentation.
+Copy `SKILL.md` into your workspace's `.agents/skills/more-human/` directory:
 
-#### Codex
-Copy the skills/ directory into your Codex skills path (typically `~/.codex/skills`). See the Agent Skills specification for the standard skill format.
+```
+your-project/
+└── .agents/
+    └── skills/
+        └── more-human/
+            └── SKILL.md
+```
 
-#### OpenCode
-Clone the entire repo into the OpenCode skills directory (`~/.opencode/skills/`):
+Or add it globally at `~/.gemini/config/skills/more-human/SKILL.md` to apply across all workspaces.
+
+### Claude Code
+
+Add `SKILL.md` to a `/.claude/skills/more-human/` folder in the root of your workspace. See the [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code) for details.
+
+### Codex
+
+Copy `SKILL.md` into your Codex skills path:
+
+```bash
+mkdir -p ~/.codex/skills/more-human
+cp SKILL.md ~/.codex/skills/more-human/
+```
+
+### OpenCode
+
+Clone the full repo into the OpenCode skills directory:
 
 ```bash
 git clone https://github.com/nthnnel/more-human.git ~/.opencode/skills/more-human
 ```
 
-Do not copy only the inner folder — clone the full repo so the directory structure is `~/.opencode/skills/more-human/SKILL.md`.
+OpenCode auto-discovers all `SKILL.md` files under `~/.opencode/skills/`. No config changes needed — just restart OpenCode.
 
-OpenCode auto-discovers all SKILL.md files under `~/.opencode/skills/`. No changes to `opencode.json` or any config file are needed. Skills become available after restarting OpenCode.
+## Key design decisions
 
-## Skills
+- **Always active** — no trigger phrase needed. The skill applies to every response automatically.
+- **Tone layer, not content override** — safety notes, honest uncertainty, and "I don't know" are preserved. The skill changes *how* the AI says things, not *what* it says.
+- **Formal context aware** — the casual voice applies to conversation with you, but deliverables (client emails, cover letters, legal text) adopt the register their audience needs.
+- **Frustration-aware** — when you're stressed or debugging at 2am, the teasing stops. Just direct help.
+- **Bilingual** — includes banned phrases and calibrated examples for both English and Indonesian.
 
-| Skill | Description |
+## What's inside
+
+| File | Purpose |
 | :--- | :--- |
-| **more-human** | Communicate in a warm, structured, and adaptive manner. Switch to pure logic and efficiency when coding, and use a natural, empathetic, and clutter-free style for text or discussions. |
+| `SKILL.md` | The complete skill — voice rules, banned words, coding preferences, EPOCH framework, and five calibrated examples |
+| `LICENSE` | MIT |
+| `README.md` | You're reading it |
+
+## Contributing
+
+The skill is intentionally complete and stable. If you find a real-world response where the voice misses — not a hypothetical, an actual miss — open an issue with the prompt and output. That's how Example F gets written.
+
+## License
+
+[MIT](LICENSE) © nathan
