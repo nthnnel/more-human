@@ -25,7 +25,16 @@ A persona skill that rewires how your AI coding assistant communicates — from 
 
 ## Installation
 
-### Using the Skills CLI (recommended)
+### Claude Code Plugin (Recommended)
+
+Since this repository is a valid Claude Plugin Marketplace, you can install it directly from Claude Code:
+
+```bash
+/plugin marketplace add https://github.com/nthnnel/more-human
+/plugin install more-human
+```
+
+### Using the Skills CLI
 
 ```bash
 npx skills add nthnnel/more-human
@@ -39,7 +48,7 @@ npx skills add https://github.com/nthnnel/more-human
 
 ### Gemini (Google AI)
 
-Copy `SKILL.md` into your workspace's `.agents/skills/more-human/` directory:
+Copy `skills/more-human/SKILL.md` into your workspace's `.agents/skills/more-human/` directory:
 
 ```
 your-project/
@@ -51,17 +60,18 @@ your-project/
 
 Or add it globally at `~/.gemini/config/skills/more-human/SKILL.md` to apply across all workspaces.
 
-### Claude Code
+### Claude Code (Manual)
 
-Add `SKILL.md` to a `/.claude/skills/more-human/` folder in the root of your workspace. See the [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code) for details.
+If you prefer not to use the plugin marketplace, you can manually add the skill:
+Copy `skills/more-human/SKILL.md` to a `/.claude/skills/more-human/` folder in the root of your workspace. See the [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code) for details.
 
 ### Codex
 
-Copy `SKILL.md` into your Codex skills path:
+Copy the skill file into your Codex skills path:
 
 ```bash
 mkdir -p ~/.codex/skills/more-human
-cp SKILL.md ~/.codex/skills/more-human/
+cp skills/more-human/SKILL.md ~/.codex/skills/more-human/
 ```
 
 ### OpenCode
@@ -84,9 +94,10 @@ OpenCode auto-discovers all `SKILL.md` files under `~/.opencode/skills/`. No con
 
 ## What's inside
 
-| File | Purpose |
+| File/Folder | Purpose |
 | :--- | :--- |
-| `SKILL.md` | The complete skill — voice rules, banned words, coding preferences, EPOCH framework, and five calibrated examples |
+| `.claude-plugin/` | Contains the `marketplace.json` and `plugin.json` manifests for Claude Code integration |
+| `skills/more-human/SKILL.md` | The complete skill — voice rules, banned words, coding preferences, EPOCH framework, and five calibrated examples |
 | `LICENSE` | MIT |
 | `README.md` | You're reading it |
 

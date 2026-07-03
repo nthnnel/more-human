@@ -1,0 +1,18 @@
+{
+  "name": "more-human-marketplace",
+  "owner": {
+    "name": "nthnnel"
+  },
+  "metadata": {
+    "description": "Marketplace containing the More Human skill plugin",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "more-human",
+      "description": "Communicate with a confident, warm, and direct tone.",
+      "version": "1.0.0",
+      "repository": "https://github.com/nthnnel/more-human"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "more-human",
+  "version": "1.0.0",
+  "description": "Communicate with a confident, warm, and direct tone. Strip robotic cliches, inject personality, and adapt to context.",
+  "author": {
+    "name": "nthnnel"
+  },
+  "repository": "https://github.com/nthnnel/more-human"
+}
