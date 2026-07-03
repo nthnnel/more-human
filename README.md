@@ -1,38 +1,46 @@
 # more-human (AI Collaborator Persona)
 
-Sebuah *skill* AI yang mengubah gaya bahasa robotik, kaku, dan penuh basa-basi menjadi tulisan yang punya "jiwa" dan terasa seperti ditulis oleh manusia beneran. 
+These skills follow the Agent Skills specification so they can be used by any skills-compatible agent, including Claude Code, Codex, and Open Code.
 
-Didesain agar AI berani beropini, paham konteks, dan nggak cuma jadi asisten yang selalu bilang "Tentu, saya siap membantu".
+## Installation
 
----
+### Marketplace
+/plugin marketplace add nthnnel/more-human
+/plugin install more-human@more-human
+npx skills
+npx skills add git@github.com:nthnnel/more-human.git
 
+<<<<<<< Updated upstream
 ### Apa fungsinya?
 Biasanya, kalau kamu nyuruh AI nulis email, artikel, atau kode, hasilnya pasti kerasa banget "AI-nya". Kalimatnya terlalu rapi, pakai kata-kata klise (kayak *delve, landscape yang dinamis, mendemistifikasi*), dan rasanya hambar.
+=======
+Instead of ssh, if you prefer to use https:
 
-Skill `more-human` ngebenerin ini.
-Skill ini bertindak sebagai editor galak yang bakal nge-hapus semua ciri tulisan AI, nambahin opini, ngatur ritme kalimat biar lebih ngalir, dan ngasih kepribadian (persona) ke dalam respons AI. Hasil akhirnya? Tulisan yang kerasa nyata.
+npx skills add https://github.com/nthnnel/more-human
+>>>>>>> Stashed changes
 
-### Kapan harus dipakai?
+### Manually
 
-**Gunakan skill ini untuk:**
-* "Tolong *humanize* draft email penawaran ini biar nggak kaku."
-* "Review kode ini, tapi pakai bahasa santai kayak *senior developer* yang lagi ngajarin *junior*."
-* "Tulis ulang landing page ini, ilangin semua kata-kata hype/marketing murahan khas AI."
-* "Gue mau bikin fitur X, coba *push back* ide gue kalau emang jelek."
+#### Claude Code
+Add the contents of this repo to a `/.claude` folder in the root of your workspace (or whichever folder you're using with Claude Code). See more in the official Claude Skills documentation.
 
-**JANGAN gunakan skill ini untuk:**
-* "Apa ibukota Prancis?" (Pertanyaan fakta, nggak butuh gaya bahasa kreatif).
-* Bikin atau ngedit file konfigurasi (JSON/YAML) murni.
-* Nge-generate data mentah atau log server.
+#### Codex
+Copy the skills/ directory into your Codex skills path (typically `~/.codex/skills`). See the Agent Skills specification for the standard skill format.
 
-Skill ini paling bersinar kalau kamu butuh tulisan naratif, empati, atau butuh teman diskusi (partner) yang berani ngasih opini.
+#### OpenCode
+Clone the entire repo into the OpenCode skills directory (`~/.opencode/skills/`):
 
----
+```bash
+git clone https://github.com/nthnnel/more-human.git ~/.opencode/skills/more-human
+```
 
-### Cara Install (Nggak perlu buka terminal)
+Do not copy only the inner folder — clone the full repo so the directory structure is `~/.opencode/skills/more-human/SKILL.md`.
 
-Pilih cara yang paling gampang buat kamu. Skill ini jalan di Claude Code, Gemini, atau Antigravity IDE.
+OpenCode auto-discovers all SKILL.md files under `~/.opencode/skills/`. No changes to `opencode.json` or any config file are needed. Skills become available after restarting OpenCode.
 
+## Skills
+
+<<<<<<< Updated upstream
 **Opsi 1: Biar AI yang install sendiri**
 Buka chat baru di AI kamu (misal di Claude Code atau Gemini IDE), lalu *paste* prompt ini:
 
@@ -64,3 +72,8 @@ AI bakal langsung otomatis jalanin workflow *humanizer*-nya, ngebuang semua kata
 
 ### Credit & Inspirasi
 Skill ini terinspirasi dari gerakan *AI Cleanup* dan best practice *instruction engineering* modern. Tujuannya simpel: kita ingin kerja sama AI yang berasa kayak kerja sama rekan tim sungguhan.
+=======
+| Skill | Description |
+| :--- | :--- |
+| **more-human** | Communicate in a warm, structured, and adaptive manner. Switch to pure logic and efficiency when coding, and use a natural, empathetic, and clutter-free style for text or discussions. |
+>>>>>>> Stashed changes
