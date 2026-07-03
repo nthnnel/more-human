@@ -5,19 +5,19 @@ These skills follow the Agent Skills specification so they can be used by any sk
 ## Installation
 
 ### Marketplace
+
+```bash
 /plugin marketplace add nthnnel/more-human
 /plugin install more-human@more-human
 npx skills
 npx skills add git@github.com:nthnnel/more-human.git
+```
 
-<<<<<<< Updated upstream
-### Apa fungsinya?
-Biasanya, kalau kamu nyuruh AI nulis email, artikel, atau kode, hasilnya pasti kerasa banget "AI-nya". Kalimatnya terlalu rapi, pakai kata-kata klise (kayak *delve, landscape yang dinamis, mendemistifikasi*), dan rasanya hambar.
-=======
 Instead of ssh, if you prefer to use https:
 
+```bash
 npx skills add https://github.com/nthnnel/more-human
->>>>>>> Stashed changes
+```
 
 ### Manually
 
@@ -40,40 +40,6 @@ OpenCode auto-discovers all SKILL.md files under `~/.opencode/skills/`. No chang
 
 ## Skills
 
-<<<<<<< Updated upstream
-**Opsi 1: Biar AI yang install sendiri**
-Buka chat baru di AI kamu (misal di Claude Code atau Gemini IDE), lalu *paste* prompt ini:
-
-> "Tolong install skill ini buat gue. File utamanya ada di repo ini: [Link Repo GitHub Kamu / Path Lokal]. Setting semuanya supaya gue bisa langsung pakai, dan kasih tau kalau ada yang perlu gue lakuin."
-
-AI bakal baca strukturnya dan otomatis naruh file `SKILL.md` ke tempat yang benar.
-
-**Opsi 2: Download manual & minta tolong AI**
-1. Download file `SKILL.md` dari repo ini.
-2. Buka AI andalan kamu, *attach* filenya, lalu bilang:
-> "Gue baru aja download file SKILL.md buat skill 'more-human'. Bisa tolong pandu gue cara install-nya? Kasih tau gue file ini harus ditaruh di folder mana."
-
-AI bakal nuntun kamu *step-by-step*.
-
----
-
-### Cara Pakai
-
-Kalau udah ke-install, di percakapan mana pun, kamu tinggal sebut salah satu kata ajaib ini:
-
-* "Tolong **humanize** ini..."
-* "**anti-ai pass** dong buat tulisan ini..."
-* "**rewrite like a human**"
-* "Pakai **persona Sena**, tolong cek tulisan ini."
-
-AI bakal langsung otomatis jalanin workflow *humanizer*-nya, ngebuang semua kata-kata klise, dan ngasih kamu hasil yang jauh lebih natural.
-
----
-
-### Credit & Inspirasi
-Skill ini terinspirasi dari gerakan *AI Cleanup* dan best practice *instruction engineering* modern. Tujuannya simpel: kita ingin kerja sama AI yang berasa kayak kerja sama rekan tim sungguhan.
-=======
 | Skill | Description |
 | :--- | :--- |
 | **more-human** | Communicate in a warm, structured, and adaptive manner. Switch to pure logic and efficiency when coding, and use a natural, empathetic, and clutter-free style for text or discussions. |
->>>>>>> Stashed changes
