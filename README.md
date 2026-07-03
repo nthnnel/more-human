@@ -6,9 +6,6 @@ Didesain agar AI berani beropini, paham konteks, dan nggak cuma jadi asisten yan
 
 ---
 
-### Apa itu *skill*?
-Pikirkan *skill* sebagai *job description* khusus buat AI kamu. Begitu di-install, kamu bisa manggil skill ini pakai satu kalimat aja, dan AI bakal langsung tahu persis gimana cara ngerjain tugasnya sesuai aturan yang udah kita tentukan.
-
 ### Apa fungsinya?
 Biasanya, kalau kamu nyuruh AI nulis email, artikel, atau kode, hasilnya pasti kerasa banget "AI-nya". Kalimatnya terlalu rapi, pakai kata-kata klise (kayak *delve, landscape yang dinamis, mendemistifikasi*), dan rasanya hambar.
 
