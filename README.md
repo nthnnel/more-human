@@ -30,7 +30,7 @@ A persona skill that rewires how your AI coding assistant communicates — from 
 Since this repository is a valid Claude Plugin Marketplace, you can install it directly from Claude Code:
 
 ```bash
-/plugin marketplace add https://github.com/nthnnel/more-human
+/plugin marketplace add https://raw.githubusercontent.com/nthnnel/more-human/main/.claude-plugin/marketplace.json
 /plugin install more-human
 ```
 
