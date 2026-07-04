@@ -1,5 +1,5 @@
 {
-  "name": "more-human-marketplace",
+  "name": "more-human",
   "owner": {
     "name": "nthnnel"
   },
@@ -10,9 +10,9 @@
   "plugins": [
     {
       "name": "more-human",
+      "source": "./",
       "description": "Communicate with a confident, warm, and direct tone.",
-      "version": "1.0.0",
-      "repository": "https://github.com/nthnnel/more-human"
+      "version": "1.0.0"
     }
   ]
 }
